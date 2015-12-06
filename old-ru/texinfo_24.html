@@ -1,0 +1,127 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="content-type" content="text/html; charset=windows-1251">
+<!-- Created by texi2html 1.57 from /ibend/man/texinfo/html/texinfo.texi on September, 29  1999 -->
+
+<TITLE>Texinfo 4.0 - Пример Texinfo-файла</TITLE>
+</HEAD>
+<BODY bgcolor="white" text="black">
+ [<A HREF="texinfo_toc.html">Contents</A>] &#160; [<A HREF="texinfo_23.html">Previous</A>] &#160; [<A HREF="texinfo_25.html">Next</A>] &#160;<BR><HR><BR>
+
+<H1><A NAME="sec248">Пример Texinfo-файла</A></H1>
+<P>
+<A NAME="idx988"></A>
+
+
+<P>
+Это пример законченного короткого Texinfo-файла, без каких-либо
+комментариев.  Вы можете найти этот пример с комментариями в первой
+главе.  т рзС зш С  цш  <A HREF="texinfo_2.html#sec12">Короткий пример Texinfo-файла</A>.
+
+
+
+<PRE>
+\input texinfo   @c -*-texinfo-*-
+@c %**start of header
+@setfilename sample.info
+@settitle Пример документа
+@c %**end of header
+
+@setchapternewpage odd
+
+@ifinfo
+Это короткий пример законченного Texinfo-файла.
+
+Copyright @copyright{} 1999 Free Software Foundation, Inc.
+@end ifinfo
+
+@titlepage
+@sp 10
+@comment Заголовок печатается крупным шрифтом
+@center @titlefont{Пример заголовка}
+
+@c   Две следующие команды начинают страницу с
+@c   информацией об авторских правах
+@page
+@vskip 0pt plus 1filll
+Copyright @copyright{} 1999 Free Software Foundation, Inc.
+@end titlepage
+
+@node    Top,      Первая глава,           , (dir)
+@comment имя-ноды, следующая,    предыдущая, вверх
+
+@menu
+* Первая глава::       Первая и единственная глава в
+                       этом примере.
+* Указатель понятий::  В этом указателе есть два элемента.
+@end menu
+
+@node    Первая глава , Указатель понятий, Top   , Top
+@comment имя-ноды,      следующая,     предыдущая, вверх
+@chapter Первая глава
+@cindex Пример вхождения именного указателя
+
+Это содержимое первой главы.
+@cindex Другой пример вхождения именного указателя.
+
+Это нумерованный перечень.
+
+@enumerate
+@item
+Это первый пункт.
+
+@item
+Это второй пункт.
+@end enumerate
+
+Команды @code{makeinfo} и @code{texinfo-format-buffer}
+преобразуют Texinfo-файлы, такие как этот, в Info-файлы,
+а @TeX{} форматирует печатное руководство.
+
+@node    Указатель понятий,          , Первая глава, Top
+@comment имя-ноды         , следующая, предыдущая  , вверх
+@unnumbered Указатель понятий
+
+@printindex cp
+
+@contents
+@bye
+</PRE>
+
+<P></P><HR>
+ [<A HREF="texinfo_toc.html">Contents</A>] &#160; [<A HREF="texinfo_23.html">Previous</A>] &#160; [<A HREF="texinfo_25.html">Next</A>] &#160;<BR><HR><BR>
+
+<!-- Rambler Stuff-->
+<table Border=0 Width="100%" CELLPADDING="0" CELLSPACING="0" BORDER="0"
+<tr>
+<td ALign=Left vAlign=TOP>
+<!--begin of Top100-->
+<a href="http://top100.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?330202" alt="Rambler's Top100" width=1 height=1 border=0></a>
+<!--end of Top100 code-->
+</td>
+<td ALign="Right" vALIGN=TOP>
+<!--begin of Top100 logo-->
+<a href="http://top100.rambler.ru/top100/">
+<img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-blue.gif" alt="Rambler's Top100" width=88 height=31 border=0></a>
+<!--end of Top100 logo -->
+</td>
+</tr>
+</table>
+<!--/Rambler Stuff -->
+</body></html>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38951496-1']);
+  _gaq.push(['_trackPageview']);
+  // st1 Sunday, 06-Dec-2015 19:08:25 MSK
+  // st2 109.252.59.207
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>

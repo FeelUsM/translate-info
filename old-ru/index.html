@@ -1,0 +1,422 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="content-type" content="text/html; charset=windows-1251">
+<!-- Created by texi2html 1.57 from /ibend/man/texinfo/html/texinfo.texi on September, 29  1999 -->
+
+<TITLE>Texinfo 4.0 - трцшСу   ш</TITLE>
+</HEAD>
+<BODY bgcolor="white" text="black">
+<H1>Texinfo</H1>
+<H2>Формат документации GNU</H2>
+<H2>для Texinfo версии 4.0, 28 сентября 1999г</H2>
+<ADDRESS>Роберт Дж. Чассел</ADDRESS>
+<ADDRESS>Ричард М. Столмен</ADDRESS>
+<P>
+<UL>
+<LI><A NAME="toc1" href="texinfo_1.html#sec1">Условия копирования Texinfo</A>
+</LI><LI><A NAME="toc2" href="texinfo_2.html#sec2">Обзор Texinfo</A>
+</LI><UL>
+<LI><A NAME="toc3" href="texinfo_2.html#sec3">Описание ошибок</A>
+</LI><LI><A NAME="toc4" href="texinfo_2.html#sec4">Использование Texinfo</A>
+</LI><LI><A NAME="toc5" href="texinfo_2.html#sec5">Info-файлы</A>
+</LI><LI><A NAME="toc6" href="texinfo_2.html#sec6">Печатные книги</A>
+</LI><LI><A NAME="toc7" href="texinfo_2.html#sec7">@-команды</A>
+</LI><LI><A NAME="toc8" href="texinfo_2.html#sec8">Основные соглашения о синтаксисе</A>
+</LI><LI><A NAME="toc9" href="texinfo_2.html#sec9">Комментарии</A>
+</LI><LI><A NAME="toc10" href="texinfo_2.html#sec10">Что должен содержать Texinfo-файл</A>
+</LI><LI><A NAME="toc11" href="texinfo_2.html#sec11">Шесть частей Texinfo-файла</A>
+</LI><LI><A NAME="toc12" href="texinfo_2.html#sec12">Короткий пример Texinfo-файла</A>
+</LI><LI><A NAME="toc13" href="texinfo_2.html#sec13">Выражение признательности</A>
+</LI></UL>
+<LI><A NAME="toc14" href="texinfo_3.html#sec14">Использование режима Texinfo</A>
+</LI><UL>
+<LI><A NAME="toc15" href="texinfo_3.html#sec15">Обычные команды редактирования GNU Emacs</A>
+</LI><LI><A NAME="toc16" href="texinfo_3.html#sec16">Быстрая вставка часто используемых команд.</A>
+</LI><LI><A NAME="toc17" href="texinfo_3.html#sec17">Визуализация структуры разделов файла</A>
+</LI><LI><A NAME="toc18" href="texinfo_3.html#sec18">Обновление нод и меню</A>
+</LI><UL>
+<LI><A NAME="toc19" href="texinfo_3.html#sec19">Требования для обновления</A>
+</LI><LI><A NAME="toc20" href="texinfo_3.html#sec20">Другие команды обновления</A>
+</LI></UL>
+<LI><A NAME="toc21" href="texinfo_3.html#sec21">Форматирование для Info</A>
+</LI><LI><A NAME="toc22" href="texinfo_3.html#sec22">Форматирование и печать</A>
+</LI><LI><A NAME="toc23" href="texinfo_3.html#sec23">Резюме по режиму Texinfo</A>
+</LI></UL>
+<LI><A NAME="toc24" href="texinfo_4.html#sec24">Начало Texinfo-файла</A>
+</LI><UL>
+<LI><A NAME="toc25" href="texinfo_4.html#sec25">Образец начала Texinfo-файла</A>
+</LI><LI><A NAME="toc26" href="texinfo_4.html#sec26">Заголовок Texinfo-файла</A>
+</LI><UL>
+<LI><A NAME="toc27" href="texinfo_4.html#sec27">Первая строка Texinfo-файла</A>
+</LI><LI><A NAME="toc28" href="texinfo_4.html#sec28">Начало заголовка</A>
+</LI><LI><A NAME="toc29" href="texinfo_4.html#sec29"><CODE>@setfilename</CODE></A>
+</LI><LI><A NAME="toc30" href="texinfo_4.html#sec30"><CODE>@settitle</CODE></A>
+</LI><LI><A NAME="toc31" href="texinfo_4.html#sec31"><CODE>@setchapternewpage</CODE></A>
+</LI><LI><A NAME="toc32" href="texinfo_4.html#sec32">Отступ в начале абзаца</A>
+</LI><LI><A NAME="toc33" href="texinfo_4.html#sec33"><CODE>@exampleindent</CODE>: отступы в блоках</A>
+</LI><LI><A NAME="toc34" href="texinfo_4.html#sec34">Окончание заголовка</A>
+</LI></UL>
+<LI><A NAME="toc35" href="texinfo_4.html#sec35">Обзор и разрешения на копирование для Info</A>
+</LI><LI><A NAME="toc36" href="texinfo_4.html#sec36">Титульный лист и страница с информацией об авторских правах</A>
+</LI><UL>
+<LI><A NAME="toc37" href="texinfo_4.html#sec37"><CODE>@titlepage</CODE></A>
+</LI><LI><A NAME="toc38" href="texinfo_4.html#sec38"><CODE>@titlefont</CODE>, <CODE>@center</CODE> и <CODE>@sp</CODE></A>
+</LI><LI><A NAME="toc39" href="texinfo_4.html#sec39"><CODE>@title</CODE>, <CODE>@subtitle</CODE> и <CODE>@author</CODE></A>
+</LI><LI><A NAME="toc40" href="texinfo_4.html#sec40">Страница с информацией об авторских правах и разрешения</A>
+</LI><LI><A NAME="toc41" href="texinfo_4.html#sec41">Создание заголовков</A>
+</LI><LI><A NAME="toc42" href="texinfo_4.html#sec42">Команда <CODE>@headings</CODE></A>
+</LI></UL>
+<LI><A NAME="toc43" href="texinfo_4.html#sec43">Нода Top и главное меню</A>
+</LI><UL>
+<LI><A NAME="toc44" href="texinfo_4.html#sec44">Заголовок в ноде Top</A>
+</LI><LI><A NAME="toc45" href="texinfo_4.html#sec45">Части главного меню</A>
+</LI></UL>
+<LI><A NAME="toc46" href="texinfo_4.html#sec46">Разрешение на копирование программы</A>
+</LI></UL>
+<LI><A NAME="toc47" href="texinfo_5.html#sec47">Завершение Texinfo-файла</A>
+</LI><UL>
+<LI><A NAME="toc48" href="texinfo_5.html#sec48">Меню-указатели и печать именных указателей</A>
+</LI><LI><A NAME="toc49" href="texinfo_5.html#sec49">Создание содержания</A>
+</LI><LI><A NAME="toc50" href="texinfo_5.html#sec50"><CODE>@bye</CODE> Завершение файла</A>
+</LI></UL>
+<LI><A NAME="toc51" href="texinfo_6.html#sec51">Структура глав</A>
+</LI><UL>
+<LI><A NAME="toc52" href="texinfo_6.html#sec52">Древовидная структура разделов</A>
+</LI><LI><A NAME="toc53" href="texinfo_6.html#sec53">Типы команд описания структуры</A>
+</LI><LI><A NAME="toc54" href="texinfo_6.html#sec54"><CODE>@top</CODE></A>
+</LI><LI><A NAME="toc55" href="texinfo_6.html#sec55"><CODE>@chapter</CODE></A>
+</LI><LI><A NAME="toc56" href="texinfo_6.html#sec56"><CODE>@unnumbered</CODE> и <CODE>@appendix</CODE></A>
+</LI><LI><A NAME="toc57" href="texinfo_6.html#sec57"><CODE>@majorheading</CODE>, <CODE>@chapheading</CODE></A>
+</LI><LI><A NAME="toc58" href="texinfo_6.html#sec58"><CODE>@section</CODE></A>
+</LI><LI><A NAME="toc59" href="texinfo_6.html#sec59"><CODE>@unnumberedsec</CODE>, <CODE>@appendixsec</CODE>, <CODE>@heading</CODE></A>
+</LI><LI><A NAME="toc60" href="texinfo_6.html#sec60">Команда <CODE>@subsection</CODE></A>
+</LI><LI><A NAME="toc61" href="texinfo_6.html#sec61">Команды, подобные <CODE>@subsection</CODE></A>
+</LI><LI><A NAME="toc62" href="texinfo_6.html#sec62">Команды subsub</A>
+</LI><LI><A NAME="toc63" href="texinfo_6.html#sec63"><CODE>@raisesections</CODE> и <CODE>@lowersections</CODE></A>
+</LI></UL>
+<LI><A NAME="toc64" href="texinfo_7.html#sec64">Ноды</A>
+</LI><UL>
+<LI><A NAME="toc65" href="texinfo_7.html#sec65">Два способа</A>
+</LI><LI><A NAME="toc66" href="texinfo_7.html#sec66">Иллюстрация нод и меню</A>
+</LI><LI><A NAME="toc67" href="texinfo_7.html#sec67">Команда <CODE>@node</CODE></A>
+</LI><UL>
+<LI><A NAME="toc68" href="texinfo_7.html#sec68">Выбор имен нод и указателей</A>
+</LI><LI><A NAME="toc69" href="texinfo_7.html#sec69">Как писать строку <CODE>@node</CODE></A>
+</LI><LI><A NAME="toc70" href="texinfo_7.html#sec70">Советы по написанию строки <CODE>@node</CODE></A>
+</LI><LI><A NAME="toc71" href="texinfo_7.html#sec71">Требования для строки <CODE>@node</CODE></A>
+</LI><LI><A NAME="toc72" href="texinfo_7.html#sec72">Первая нода</A>
+</LI><LI><A NAME="toc73" href="texinfo_7.html#sec73">Команда <CODE>@top</CODE></A>
+</LI><LI><A NAME="toc74" href="texinfo_7.html#sec74">Обзор в ноде Top</A>
+</LI></UL>
+<LI><A NAME="toc75" href="texinfo_7.html#sec75">Создание указателей с помощью <CODE>makeinfo</CODE></A>
+</LI><LI><A NAME="toc76" href="texinfo_7.html#sec76"><CODE>@anchor</CODE>: Определение произвольных назначений для ссылок</A>
+</LI></UL>
+<LI><A NAME="toc77" href="texinfo_8.html#sec77">Меню</A>
+</LI><UL>
+<LI><A NAME="toc78" href="texinfo_8.html#sec78">Написание меню</A>
+</LI><LI><A NAME="toc79" href="texinfo_8.html#sec79">Составные части меню</A>
+</LI><LI><A NAME="toc80" href="texinfo_8.html#sec80">Менее беспорядочный пункт меню</A>
+</LI><LI><A NAME="toc81" href="texinfo_8.html#sec81">Пример меню</A>
+</LI><LI><A NAME="toc82" href="texinfo_8.html#sec82">Ссылки на другие Info-файлы</A>
+</LI></UL>
+<LI><A NAME="toc83" href="texinfo_9.html#sec83">Перекрестные ссылки</A>
+</LI><UL>
+<LI><A NAME="toc84" href="texinfo_9.html#sec84">Различные команды для перекрестных ссылок</A>
+</LI><LI><A NAME="toc85" href="texinfo_9.html#sec85">Части перекрестных ссылок</A>
+</LI><LI><A NAME="toc86" href="texinfo_9.html#sec86">Команда <CODE>@xref</CODE></A>
+</LI><UL>
+<LI><A NAME="toc87" href="texinfo_9.html#sec87"><CODE>@xref</CODE> с одним аргументом</A>
+</LI><LI><A NAME="toc88" href="texinfo_9.html#sec88"><CODE>@xref</CODE> с двумя аргументами</A>
+</LI><LI><A NAME="toc89" href="texinfo_9.html#sec89"><CODE>@xref</CODE> с тремя аргументами</A>
+</LI><LI><A NAME="toc90" href="texinfo_9.html#sec90"><CODE>@xref</CODE> с четырьмя и пятью аргументами</A>
+</LI></UL>
+<LI><A NAME="toc91" href="texinfo_9.html#sec91">Именование ноды Top</A>
+</LI><LI><A NAME="toc92" href="texinfo_9.html#sec92"><CODE>@ref</CODE></A>
+</LI><LI><A NAME="toc93" href="texinfo_9.html#sec93"><CODE>@pxref</CODE></A>
+</LI><LI><A NAME="toc94" href="texinfo_9.html#sec94"><CODE>@inforef</CODE></A>
+</LI><LI><A NAME="toc95" href="texinfo_9.html#sec95"><CODE>@uref{<VAR>url</VAR>[, <VAR>отображаемый-текст</VAR>]}</CODE></A>
+</LI></UL>
+<LI><A NAME="toc96" href="texinfo_10.html#sec96">Пометка слов и фраз</A>
+</LI><UL>
+<LI><A NAME="toc97" href="texinfo_10.html#sec97">Обозначение определений, команд, etc.</A>
+</LI><UL>
+<LI><A NAME="toc98" href="texinfo_10.html#sec98"><CODE>@code</CODE>{<VAR>пример-кода</VAR>}</A>
+</LI><LI><A NAME="toc99" href="texinfo_10.html#sec99"><CODE>@kbd</CODE>{<VAR>символы-клавиатуры</VAR>}</A>
+</LI><LI><A NAME="toc100" href="texinfo_10.html#sec100"><CODE>@key</CODE>{<VAR>название-клавиши</VAR>}</A>
+</LI><LI><A NAME="toc101" href="texinfo_10.html#sec101"><CODE>@samp</CODE>{<VAR>текст</VAR>}</A>
+</LI><LI><A NAME="toc102" href="texinfo_10.html#sec102"><CODE>@var</CODE>{<VAR>метасинтаксическая-переменная</VAR>}</A>
+</LI><LI><A NAME="toc103" href="texinfo_10.html#sec103"><CODE>@env</CODE>{<VAR>переменная-среды</VAR>}</A>
+</LI><LI><A NAME="toc104" href="texinfo_10.html#sec104"><CODE>@file</CODE>{<VAR>имя-файла</VAR>}</A>
+</LI><LI><A NAME="toc105" href="texinfo_10.html#sec105"><CODE>@command</CODE>{<VAR>имя-команды</VAR>}</A>
+</LI><LI><A NAME="toc106" href="texinfo_10.html#sec106"><CODE>@option</CODE>{<VAR>имя-ключа</VAR>}</A>
+</LI><LI><A NAME="toc107" href="texinfo_10.html#sec107"><CODE>@dfn</CODE>{<VAR>термин</VAR>}</A>
+</LI><LI><A NAME="toc108" href="texinfo_10.html#sec108"><CODE>@cite</CODE>{<VAR>ссылка</VAR>}</A>
+</LI><LI><A NAME="toc109" href="texinfo_10.html#sec109"><CODE>@acronym</CODE>{<VAR>аббревиатура</VAR>}</A>
+</LI><LI><A NAME="toc110" href="texinfo_10.html#sec110"><CODE>@url</CODE>{<VAR>унифицированный-указатель-ресурса</VAR>}</A>
+</LI><LI><A NAME="toc111" href="texinfo_10.html#sec111"><CODE>@email</CODE>{<VAR>адрес</VAR>[, <VAR>отображаемый-текст</VAR>]}</A>
+</LI></UL>
+<LI><A NAME="toc112" href="texinfo_10.html#sec112">Логическое ударение</A>
+</LI><UL>
+<LI><A NAME="toc113" href="texinfo_10.html#sec113"><CODE>@emph</CODE>{<VAR>текст</VAR>} и <CODE>@strong</CODE>{<VAR>текст</VAR>}</A>
+</LI><LI><A NAME="toc114" href="texinfo_10.html#sec114"><CODE>@sc</CODE>{<VAR>текст</VAR>}: Шрифт маленьких заглавных букв</A>
+</LI><LI><A NAME="toc115" href="texinfo_10.html#sec115">Шрифты печати</A>
+</LI></UL>
+</UL>
+<LI><A NAME="toc116" href="texinfo_11.html#sec116">Цитаты и примеры</A>
+</LI><UL>
+<LI><A NAME="toc117" href="texinfo_11.html#sec117">Команды ограничения блока</A>
+</LI><LI><A NAME="toc118" href="texinfo_11.html#sec118"><CODE>@quotation</CODE></A>
+</LI><LI><A NAME="toc119" href="texinfo_11.html#sec119"><CODE>@example</CODE></A>
+</LI><LI><A NAME="toc120" href="texinfo_11.html#sec120"><CODE>@noindent</CODE></A>
+</LI><LI><A NAME="toc121" href="texinfo_11.html#sec121"><CODE>@lisp</CODE></A>
+</LI><LI><A NAME="toc122" href="texinfo_11.html#sec122">Команды блоков <CODE>@small...</CODE></A>
+</LI><LI><A NAME="toc123" href="texinfo_11.html#sec123"><CODE>@display</CODE> и <CODE>@smalldisplay</CODE></A>
+</LI><LI><A NAME="toc124" href="texinfo_11.html#sec124"><CODE>@format</CODE> и <CODE>@smallformat</CODE></A>
+</LI><LI><A NAME="toc125" href="texinfo_11.html#sec125"><CODE>@exdent</CODE>: Отмена отступа в строке</A>
+</LI><LI><A NAME="toc126" href="texinfo_11.html#sec126"><CODE>@flushleft</CODE> и <CODE>@flushright</CODE></A>
+</LI><LI><A NAME="toc127" href="texinfo_11.html#sec127">Рисование рамок вокруг примеров</A>
+</LI></UL>
+<LI><A NAME="toc128" href="texinfo_12.html#sec128">Перечни и таблицы</A>
+</LI><UL>
+<LI><A NAME="toc129" href="texinfo_12.html#sec129"><CODE>@itemize</CODE>: создание простых перечней</A>
+</LI><LI><A NAME="toc130" href="texinfo_12.html#sec130"><CODE>@enumerate</CODE>: создание нумерованных перечней</A>
+</LI><LI><A NAME="toc131" href="texinfo_12.html#sec131">Создание таблиц из двух колонок</A>
+</LI><UL>
+<LI><A NAME="toc132" href="texinfo_12.html#sec132"><CODE>@ftable</CODE> и <CODE>@vtable</CODE></A>
+</LI><LI><A NAME="toc133" href="texinfo_12.html#sec133"><CODE>@itemx</CODE></A>
+</LI></UL>
+<LI><A NAME="toc134" href="texinfo_12.html#sec134">Таблицы из многих колонок</A>
+</LI><UL>
+<LI><A NAME="toc135" href="texinfo_12.html#sec135">Ширина колонок многоколоночных таблиц</A>
+</LI><LI><A NAME="toc136" href="texinfo_12.html#sec136">Строки многоколоночных таблиц</A>
+</LI></UL>
+</UL>
+<LI><A NAME="toc137" href="texinfo_13.html#sec137">Именные указатели</A>
+</LI><UL>
+<LI><A NAME="toc138" href="texinfo_13.html#sec138">Создание вхождений именного указателя</A>
+</LI><LI><A NAME="toc139" href="texinfo_13.html#sec139">Предопределенные именные указатели</A>
+</LI><LI><A NAME="toc140" href="texinfo_13.html#sec140">Определение вхождений именных указателей</A>
+</LI><LI><A NAME="toc141" href="texinfo_13.html#sec141">Объединение именных указателей</A>
+</LI><UL>
+<LI><A NAME="toc142" href="texinfo_13.html#sec142"><CODE>@syncodeindex</CODE></A>
+</LI><LI><A NAME="toc143" href="texinfo_13.html#sec143"><CODE>@synindex</CODE></A>
+</LI></UL>
+<LI><A NAME="toc144" href="texinfo_13.html#sec144">Определение новых именных указателей</A>
+</LI></UL>
+<LI><A NAME="toc145" href="texinfo_14.html#sec145">Специальные вставки</A>
+</LI><UL>
+<LI><A NAME="toc146" href="texinfo_14.html#sec146">Вставка @ и фигурных скобок</A>
+</LI><UL>
+<LI><A NAME="toc147" href="texinfo_14.html#sec147">Вставка <SAMP>`@'</SAMP> с помощью @@</A>
+</LI><LI><A NAME="toc148" href="texinfo_14.html#sec148">Вставка <SAMP>`{'</SAMP> и <SAMP>`}'</SAMP>с помощью @{ и @}</A>
+</LI></UL>
+<LI><A NAME="toc149" href="texinfo_14.html#sec149">Вставка пробелов</A>
+</LI><UL>
+<LI><A NAME="toc150" href="texinfo_14.html#sec150">Незавершение предложения</A>
+</LI><LI><A NAME="toc151" href="texinfo_14.html#sec151">Завершение предложения</A>
+</LI><LI><A NAME="toc152" href="texinfo_14.html#sec152">Несколько пробелов</A>
+</LI><LI><A NAME="toc153" href="texinfo_14.html#sec153"><CODE>@dmn</CODE>{<VAR>размер</VAR>}: Форматирование размеров</A>
+</LI></UL>
+<LI><A NAME="toc154" href="texinfo_14.html#sec154">Вставка акцентов</A>
+</LI><LI><A NAME="toc155" href="texinfo_14.html#sec155">Вставка многоточий и "горошин"</A>
+</LI><UL>
+<LI><A NAME="toc156" href="texinfo_14.html#sec156"><CODE>@dots</CODE>{} (...) и <CODE>@enddots</CODE>{} (@enddots{})</A>
+</LI><LI><A NAME="toc157" href="texinfo_14.html#sec157"><CODE>@bullet</CODE>{} (*)</A>
+</LI></UL>
+<LI><A NAME="toc158" href="texinfo_14.html#sec158">Вставка TeX и (C)</A>
+</LI><UL>
+<LI><A NAME="toc159" href="texinfo_14.html#sec159"><CODE>@TeX</CODE>{} (TeX)</A>
+</LI><LI><A NAME="toc160" href="texinfo_14.html#sec160"><CODE>@copyright</CODE>{} ((C))</A>
+</LI></UL>
+<LI><A NAME="toc161" href="texinfo_14.html#sec161"><CODE>@pounds</CODE>{} (@pounds{}): Фунты стерлингов</A>
+</LI><LI><A NAME="toc162" href="texinfo_14.html#sec162"><CODE>@minus</CODE>{} (-): Вставка знака минус</A>
+</LI><LI><A NAME="toc163" href="texinfo_14.html#sec163"><CODE>@math</CODE>: Вставка математических выражений</A>
+</LI><LI><A NAME="toc164" href="texinfo_14.html#sec164">Графические знаки для примеров</A>
+</LI><UL>
+<LI><A NAME="toc165" href="texinfo_14.html#sec165"><CODE>@result{}</CODE> (=>): Обозначение вычисления</A>
+</LI><LI><A NAME="TOC166" HREF="texinfo_14.html#SEC166"><CODE>@expansion{}</CODE> (==>): Обозначение раскрытия</A>
+</LI><LI><A NAME="toc167" href="texinfo_14.html#sec167"><CODE>@print{}</CODE> (-|): Обозначение печатаемого вывода</A>
+</LI><LI><A NAME="toc168" href="texinfo_14.html#sec168"><CODE>@error{}</CODE> (error-->): Обозначение сообщения об ошибке</A>
+</LI><LI><A NAME="toc169" href="texinfo_14.html#sec169"><CODE>@equiv{}</CODE> (==): Обозначение эквивалентности</A>
+</LI><LI><A NAME="toc170" href="texinfo_14.html#sec170"><CODE>@point{}</CODE> (-!-): Обозначение точки в буфере</A>
+</LI></UL>
+<LI><A NAME="toc171" href="texinfo_14.html#sec171">Сноски</A>
+</LI><UL>
+<LI><A NAME="toc172" href="texinfo_14.html#sec172">Команды создания сносок</A>
+</LI><LI><A NAME="toc173" href="texinfo_14.html#sec173">Стили сносок</A>
+</LI></UL>
+<LI><A NAME="toc174" href="texinfo_14.html#sec174">Вставка рисунков</A>
+</LI></UL>
+<LI><A NAME="toc175" href="texinfo_15.html#sec175">Задание и предотвращение разрывов.</A>
+</LI><UL>
+<LI><A NAME="toc176" href="texinfo_15.html#sec176"><CODE>@*</CODE>: Разрыв строки</A>
+</LI><LI><A NAME="toc177" href="texinfo_15.html#sec177"><CODE>@-</CODE> и <CODE>@hyphenation</CODE>: Переносы</A>
+</LI><LI><A NAME="toc178" href="texinfo_15.html#sec178"><CODE>@w</CODE>{<VAR>текст</VAR>}: Предотвращение разрывов строк</A>
+</LI><LI><A NAME="toc179" href="texinfo_15.html#sec179"><CODE>@sp</CODE> <VAR>n</VAR>: Вставка пустых строк</A>
+</LI><LI><A NAME="toc180" href="texinfo_15.html#sec180"><CODE>@page</CODE>: Переход на новую страницу</A>
+</LI><LI><A NAME="toc181" href="texinfo_15.html#sec181"><CODE>@group</CODE>: Предотвращение разрывов страниц</A>
+</LI><LI><A NAME="toc182" href="texinfo_15.html#sec182"><CODE>@need <VAR>mils</VAR></CODE>: Предотвращение разрывов страниц</A>
+</LI></UL>
+<LI><A NAME="toc183" href="texinfo_16.html#sec183">Команды для определений</A>
+</LI><UL>
+<LI><A NAME="toc184" href="texinfo_16.html#sec184">Шаблон определения</A>
+</LI><LI><A NAME="toc185" href="texinfo_16.html#sec185">Необязательные и повторяющиеся аргументы</A>
+</LI><LI><A NAME="toc186" href="texinfo_16.html#sec186">Две или более "первых" строк</A>
+</LI><LI><A NAME="toc187" href="texinfo_16.html#sec187">Команды для определений</A>
+</LI><UL>
+<LI><A NAME="toc188" href="texinfo_16.html#sec188">Функции и похожие объекты</A>
+</LI><LI><A NAME="toc189" href="texinfo_16.html#sec189">Переменные и похожие объекты</A>
+</LI><LI><A NAME="toc190" href="texinfo_16.html#sec190">Функции в языках с контролем типов</A>
+</LI><LI><A NAME="toc191" href="texinfo_16.html#sec191">Переменные в языках с контролем типов</A>
+</LI><LI><A NAME="toc192" href="texinfo_16.html#sec192">Объектно-ориентированное программирование</A>
+</LI><LI><A NAME="toc193" href="texinfo_16.html#sec193">Типы данных</A>
+</LI></UL>
+<LI><A NAME="toc194" href="texinfo_16.html#sec194">Соглашения по написанию определений</A>
+</LI><LI><A NAME="toc195" href="texinfo_16.html#sec195">Пример определения функции</A>
+</LI></UL>
+<LI><A NAME="toc196" href="texinfo_17.html#sec196">Условно видимый текст</A>
+</LI><UL>
+<LI><A NAME="toc197" href="texinfo_17.html#sec197">Условные команды</A>
+</LI><LI><A NAME="toc198" href="texinfo_17.html#sec198">Отрицательные условные команды</A>
+</LI><LI><A NAME="toc199" href="texinfo_17.html#sec199">Непосредственный вызов команд программы форматирования</A>
+</LI><LI><A NAME="toc200" href="texinfo_17.html#sec200"><CODE>@set</CODE>, <CODE>@clear</CODE> и <CODE>@value</CODE></A>
+</LI><UL>
+<LI><A NAME="toc201" href="texinfo_17.html#sec201"><CODE>@ifset</CODE> и <CODE>@ifclear</CODE></A>
+</LI><LI><A NAME="toc202" href="texinfo_17.html#sec202"><CODE>@set</CODE> и <CODE>@value</CODE></A>
+</LI><LI><A NAME="toc203" href="texinfo_17.html#sec203">Пример применения <CODE>@value</CODE></A>
+</LI></UL>
+</UL>
+<LI><A NAME="toc204" href="texinfo_18.html#sec204">Поддержка разных языков</A>
+</LI><UL>
+<LI><A NAME="toc205" href="texinfo_18.html#sec205"><CODE>@documentlanguage <VAR>cc</VAR></CODE>: Задание языка документа</A>
+</LI><LI><A NAME="toc206" href="texinfo_18.html#sec206"><CODE>@documentencoding <VAR>enc</VAR></CODE>: Задание входной кодировки</A>
+</LI></UL>
+<LI><A NAME="toc207" href="texinfo_19.html#sec207">Определение новых команд Texinfo</A>
+</LI><UL>
+<LI><A NAME="toc208" href="texinfo_19.html#sec208">Определение макросов</A>
+</LI><LI><A NAME="toc209" href="texinfo_19.html#sec209">Вызов макросов</A>
+</LI><LI><A NAME="toc210" href="texinfo_19.html#sec210">Подробно о макросах</A>
+</LI><LI><A NAME="toc211" href="texinfo_19.html#sec211"><SAMP>`@alias <VAR>новая</VAR>=<VAR>существующая</VAR>'</SAMP></A>
+</LI><LI><A NAME="toc212" href="texinfo_19.html#sec212"><SAMP>`definfoenclose'</SAMP>: Настройка выделения</A>
+</LI></UL>
+<LI><A NAME="toc213" href="texinfo_20.html#sec213">Форматирование и печать твердой копии</A>
+</LI><UL>
+<LI><A NAME="toc214" href="texinfo_20.html#sec214">Используйте TeX</A>
+</LI><LI><A NAME="toc215" href="texinfo_20.html#sec215">Форматирование с помощью <CODE>tex</CODE> и <CODE>texindex</CODE></A>
+</LI><LI><A NAME="toc216" href="texinfo_20.html#sec216">Форматирование с помощью <CODE>texi2dvi</CODE></A>
+</LI><LI><A NAME="toc217" href="texinfo_20.html#sec217">Печать в оболочке с помощью <CODE>lpr -d</CODE></A>
+</LI><LI><A NAME="toc218" href="texinfo_20.html#sec218">Из оболочки Emacs</A>
+</LI><LI><A NAME="toc219" href="texinfo_20.html#sec219">Форматирование и печать в режиме Texinfo</A>
+</LI><LI><A NAME="toc220" href="texinfo_20.html#sec220">Использование списка локальных переменных</A>
+</LI><LI><A NAME="toc221" href="texinfo_20.html#sec221">Обзор необходимого для форматирования с TeX</A>
+</LI><LI><A NAME="toc222" href="texinfo_20.html#sec222">Подготовка к применению TeX</A>
+</LI><LI><A NAME="toc223" href="texinfo_20.html#sec223">Переполненные боксы</A>
+</LI><LI><A NAME="toc224" href="texinfo_20.html#sec224">Печать "маленьких" книг</A>
+</LI><LI><A NAME="toc225" href="texinfo_20.html#sec225">Печать на формате A4</A>
+</LI><LI><A NAME="toc226" href="texinfo_20.html#sec226"><CODE>@pagesizes</CODE> [<VAR>ширина</VAR>][, <VAR>высота</VAR>]: Произвольный размер страниц</A>
+</LI><LI><A NAME="toc227" href="texinfo_20.html#sec227">Обрезные метки и увеличение</A>
+</LI><LI><A NAME="toc228" href="texinfo_20.html#sec228">Вывод в PDF</A>
+</LI></UL>
+<LI><A NAME="toc229" href="texinfo_21.html#sec229">Создание и установка Info-файлов</A>
+</LI><UL>
+<LI><A NAME="toc230" href="texinfo_21.html#sec230">Создание Info-файла</A>
+</LI><UL>
+<LI><A NAME="toc231" href="texinfo_21.html#sec231">Преимущества <CODE>makeinfo</CODE></A>
+</LI><LI><A NAME="toc232" href="texinfo_21.html#sec232">Запуск <CODE>makeinfo</CODE> из оболочки</A>
+</LI><LI><A NAME="toc233" href="texinfo_21.html#sec233">Ключи для <CODE>makeinfo</CODE></A>
+</LI><LI><A NAME="toc234" href="texinfo_21.html#sec234">Проверка указателей</A>
+</LI><LI><A NAME="toc235" href="texinfo_21.html#sec235">Запуск <CODE>makeinfo</CODE> из Emacs</A>
+</LI><LI><A NAME="toc236" href="texinfo_21.html#sec236">Команды <CODE>texinfo-format...</CODE></A>
+</LI><LI><A NAME="toc237" href="texinfo_21.html#sec237">Пакетное форматирование</A>
+</LI><LI><A NAME="toc238" href="texinfo_21.html#sec238">Создание тегов и разбиение файлов</A>
+</LI><LI><A NAME="toc239" href="texinfo_21.html#sec239">Создание HTML</A>
+</LI></UL>
+<LI><A NAME="toc240" href="texinfo_21.html#sec240">Установка Info-файла</A>
+</LI><UL>
+<LI><A NAME="toc241" href="texinfo_21.html#sec241">Файл-каталог <TT>`dir'</TT></A>
+</LI><LI><A NAME="toc242" href="texinfo_21.html#sec242">Включение нового Info-файла</A>
+</LI><LI><A NAME="toc243" href="texinfo_21.html#sec243">Info-файлы в других каталогах</A>
+</LI><LI><A NAME="toc244" href="texinfo_21.html#sec244">Установка файлов-каталогов Info</A>
+</LI><LI><A NAME="toc245" href="texinfo_21.html#sec245">Вызов install-info</A>
+</LI></UL>
+</UL>
+<LI><A NAME="toc246" href="texinfo_22.html#sec246">Список @-команд</A>
+</LI><LI><A NAME="toc247" href="texinfo_23.html#sec247">Советы и подсказки</A>
+</LI><LI><A NAME="toc248" href="texinfo_24.html#sec248">Пример Texinfo-файла</A>
+</LI><LI><A NAME="toc249" href="texinfo_25.html#sec249">Пример разрешений</A>
+</LI><UL>
+<LI><A NAME="toc250" href="texinfo_25.html#sec250">Разрешения на копирование для Info</A>
+</LI><LI><A NAME="toc251" href="texinfo_25.html#sec251">Разрешение на копирование на титульном листе</A>
+</LI></UL>
+<LI><A NAME="toc252" href="texinfo_26.html#sec252">Включаемые файлы</A>
+</LI><UL>
+<LI><A NAME="toc253" href="texinfo_26.html#sec253">Как использовать включаемые файлы</A>
+</LI><LI><A NAME="toc254" href="texinfo_26.html#sec254"><CODE>texinfo-multiple-files-update</CODE></A>
+</LI><LI><A NAME="toc255" href="texinfo_26.html#sec255">Требования для включаемых файлов</A>
+</LI><LI><A NAME="toc256" href="texinfo_26.html#sec256">Пример файла с <CODE>@include</CODE></A>
+</LI><LI><A NAME="toc257" href="texinfo_26.html#sec257">История развития включаемых файлов</A>
+</LI></UL>
+<LI><A NAME="toc258" href="texinfo_27.html#sec258">Заголовки страниц</A>
+</LI><UL>
+<LI><A NAME="toc259" href="texinfo_27.html#sec259">Стандартные форматы заголовков</A>
+</LI><LI><A NAME="toc260" href="texinfo_27.html#sec260">Задание типа заголовка</A>
+</LI><LI><A NAME="toc261" href="texinfo_27.html#sec261">Как создать свои заголовки</A>
+</LI></UL>
+<LI><A NAME="toc262" href="texinfo_28.html#sec262">Ошибки форматирования</A>
+</LI><UL>
+<LI><A NAME="toc263" href="texinfo_28.html#sec263">Поиск ошибок при форматировании для Info</A>
+</LI><LI><A NAME="toc264" href="texinfo_28.html#sec264">Поиск ошибок при форматировании с TeX</A>
+</LI><LI><A NAME="toc265" href="texinfo_28.html#sec265">Использование <CODE>texinfo-show-structure</CODE></A>
+</LI><LI><A NAME="toc266" href="texinfo_28.html#sec266">Использование <CODE>occur</CODE></A>
+</LI><LI><A NAME="toc267" href="texinfo_28.html#sec267">Поиск неправильных ссылок на ноды</A>
+</LI><UL>
+<LI><A NAME="toc268" href="texinfo_28.html#sec268">Запуск <CODE>Info-validate</CODE></A>
+</LI><LI><A NAME="toc269" href="texinfo_28.html#sec269">Создание неразбитого файла</A>
+</LI><LI><A NAME="toc270" href="texinfo_28.html#sec270">Создание тегов в файле</A>
+</LI><LI><A NAME="toc271" href="texinfo_28.html#sec271">Разбивание файла вручную</A>
+</LI></UL>
+</UL>
+<LI><A NAME="toc272" href="texinfo_29.html#sec272">Перезаполнение абзацев</A>
+</LI><LI><A NAME="toc273" href="texinfo_30.html#sec273">Синтаксис @-команд</A>
+</LI><LI><A NAME="toc274" href="texinfo_31.html#sec274">Как получить TeX</A>
+</LI><LI><A NAME="toc275" href="texinfo_32.html#sec275">Указатель команд и переменных</A>
+</LI><LI><A NAME="toc276" href="texinfo_33.html#sec276">Указатель понятий</A>
+</LI></UL>
+This document was generated on September, 29  1999 using
+<A HREF="http://www.mathematik.uni-kl.de/~obachman/texi2html">texi2html</A>&nbsp;1.57.
+
+
+<!-- Rambler Stuff-->
+<table Border=0 Width="100%" CELLPADDING="0" CELLSPACING="0" BORDER="0"
+<tr>
+<td ALign=Left vAlign=TOP>
+<!--begin of Top100-->
+<a href="http://top100.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?330202" alt="Rambler's Top100" width=1 height=1 border=0></a>
+<!--end of Top100 code-->
+</td>
+<td ALign="Right" vALIGN=TOP>
+<!--begin of Top100 logo-->
+<a href="http://top100.rambler.ru/top100/">
+<img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-blue.gif" alt="Rambler's Top100" width=88 height=31 border=0></a>
+<!--end of Top100 logo -->
+</td>
+</tr>
+</table>
+<!--/Rambler Stuff -->
+</body></html>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38951496-1']);
+  _gaq.push(['_trackPageview']);
+  // st1 Sunday, 06-Dec-2015 19:02:12 MSK
+  // st2 109.252.59.207
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>

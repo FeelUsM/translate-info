@@ -1,0 +1,126 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="content-type" content="text/html; charset=windows-1251">
+<!-- Created by texi2html 1.57 from /ibend/man/texinfo/html/texinfo.texi on September, 29  1999 -->
+
+<TITLE>Texinfo 4.0 - Поддержка разных языков</TITLE>
+</HEAD>
+<BODY bgcolor="white" text="black">
+ [<A HREF="texinfo_toc.html">Contents</A>] &#160; [<A HREF="texinfo_17.html">Previous</A>] &#160; [<A HREF="texinfo_19.html">Next</A>] &#160;<BR><HR><BR>
+
+<H1><A NAME="sec204">Поддержка разных языков</A></H1>
+
+<P>
+<A NAME="idx731"></A>
+<A NAME="idx732"></A>
+<A NAME="idx733"></A>
+В Texinfo есть некоторая поддержка для документов, написанных не на
+английском языке, хотя в этой области еще предстоит сделать значительную
+работу.
+
+
+<P>
+Для получения перечня различных акцентов и специальных символов,
+поддерживаемых Texinfo, смотрите С  цш  <A HREF="texinfo_14.html#sec154">Вставка акцентов</A>.
+
+
+
+
+<H2><A NAME="sec205"><CODE>@documentlanguage <VAR>cc</VAR></CODE>: Задание языка документа</A></H2>
+
+<P>
+<A NAME="idx734"></A>
+<A NAME="idx735"></A>
+
+
+<P>
+Команда <CODE>@documentlanguage</CODE> объявляет язык текущего документа.
+Пишите ее на отдельной строке, после нее пишите двухсимвольный код языка
+ISO-639 (перечень ниже).  Если у вас есть документ на нескольких языках,
+предполагается, что вы можете использовать ее несколько раз, для
+объявления каждого изменения языка.  Если эта команда не написана, по
+умолчанию используется значение <CODE>en</CODE>, английский язык.
+
+
+<P>
+<A NAME="idx736"></A>
+В настоящее время эта команда игнорируется при выводе в Info и HTML.  В
+TeX, она считывает файл <TT>`txi-<VAR>cc</VAR>.tex'</TT> (если он существует).
+Эти файлы переопределяют различные английские слова, используемые в
+выводе TeX, такие как `Chapter', `See' и так далее.
+
+
+<P>
+<A NAME="idx737"></A>
+<A NAME="idx738"></A>
+Было бы неплохо, если бы эти команды изменяли также представление TeX
+о текущих образцах переносов (с помощью примитива TeX
+<CODE>\language</CODE>), но, к сожалению, пока это не реализовано.
+
+
+
+
+<H2><A NAME="sec206"><CODE>@documentencoding <VAR>enc</VAR></CODE>: Задание входной кодировки</A></H2>
+
+<P>
+<A NAME="idx739"></A>
+<A NAME="idx740"></A>
+<A NAME="idx741"></A>
+
+
+<P>
+Команда <CODE>@documentencoding</CODE> объявляет входную кодировку документа.
+Пишите ее на отдельной строке, после нее пишите правильное описание
+кодировки, такое как <SAMP>`ISO-8859-1'</SAMP>.
+
+
+<P>
+<A NAME="idx742"></A>
+<A NAME="idx743"></A>
+На данный момент это используется только при выводе <CODE>makeinfo</CODE> в
+формате HTML.  Если задана кодировка документа <VAR>код</VAR>, она
+используется в теге <SAMP>`&#60;meta&#62;'</SAMP> в секции <SAMP>`&#60;head&#62;'</SAMP>:
+
+
+
+<PRE>
+&#60;meta http-equiv="Content-Type" content="text/html; charset=<VAR>код</VAR>"&#62;
+</PRE>
+
+<P></P><HR>
+ [<A HREF="texinfo_toc.html">Contents</A>] &#160; [<A HREF="texinfo_17.html">Previous</A>] &#160; [<A HREF="texinfo_19.html">Next</A>] &#160;<BR><HR><BR>
+
+<!-- Rambler Stuff-->
+<table Border=0 Width="100%" CELLPADDING="0" CELLSPACING="0" BORDER="0"
+<tr>
+<td ALign=Left vAlign=TOP>
+<!--begin of Top100-->
+<a href="http://top100.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?330202" alt="Rambler's Top100" width=1 height=1 border=0></a>
+<!--end of Top100 code-->
+</td>
+<td ALign="Right" vALIGN=TOP>
+<!--begin of Top100 logo-->
+<a href="http://top100.rambler.ru/top100/">
+<img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-blue.gif" alt="Rambler's Top100" width=88 height=31 border=0></a>
+<!--end of Top100 logo -->
+</td>
+</tr>
+</table>
+<!--/Rambler Stuff -->
+</body></html>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38951496-1']);
+  _gaq.push(['_trackPageview']);
+  // st1 Sunday, 06-Dec-2015 19:08:25 MSK
+  // st2 109.252.59.207
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>

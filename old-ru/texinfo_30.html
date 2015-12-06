@@ -1,0 +1,118 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="content-type" content="text/html; charset=windows-1251">
+<!-- Created by texi2html 1.57 from /ibend/man/texinfo/html/texinfo.texi on September, 29  1999 -->
+
+<TITLE>Texinfo 4.0 - Синтаксис @-команд</TITLE>
+</HEAD>
+<BODY bgcolor="white" text="black">
+ [<A HREF="texinfo_toc.html">Contents</A>] &#160; [<A HREF="texinfo_29.html">Previous</A>] &#160; [<A HREF="texinfo_31.html">Next</A>] &#160;<BR><HR><BR>
+
+<H1><A NAME="sec273">Синтаксис @-команд</A></H1>
+<P>
+<A NAME="idx1053"></A>
+<A NAME="idx1054"></A>
+<A NAME="idx1055"></A>
+
+
+<P>
+Символ <SAMP>`@'</SAMP> используется для начала специальных команд Texinfo.
+(Он имеет то же значение, что и <SAMP>`\'</SAMP> в plain TeX.)  В Texinfo
+есть четыре вида @-команд:
+
+
+<DL COMPACT>
+
+<DT>1. Неалфавитные команды.
+<DD>
+Эти команды состоят из @, за которым идет знак препинания или другой
+символ, не входящий в алфавит.  Неалфавитные команды почти всегда
+являются частью текста внутри абзаца и никогда не принимают аргументов.
+Два символа (@ и следующий) самодостаточны; ни за одной из этих пар не
+пишутся фигурные скобки.  Вот все неалфавитные команды: <CODE>@.</CODE>,
+<CODE>@:</CODE>, <CODE>@*</CODE>, <CODE>@<KBD>SPACE</KBD></CODE>, <CODE>@<KBD>TAB</KBD></CODE>,
+<CODE>@<KBD>NL</KBD></CODE>, <CODE>@@</CODE>, <CODE>@{</CODE> и <CODE>@}</CODE>.
+
+<DT>2. Алфавитные команды, не требующие аргументов.
+<DD>
+Эти команды начинаются с @, за которым идут левая и правая фигурные
+скобки.  Эти команды вставляют в документ специальные символы; они не
+требуют аргументов.  Например, <CODE>@dots{}</CODE> =>
+<SAMP>`...'</SAMP>, <CODE>@equiv{}</CODE> => <SAMP>`=='</SAMP>,
+<CODE>@TeX{}</CODE> => `TeX' и <CODE>@bullet{}</CODE> =>
+<SAMP>`*'</SAMP>.
+
+<DT>3. Алфавитные команды, принимающие аргументы в фигурных скобках.
+<DD>
+Эти команды начинаются с @, за которым идут буква или слово и аргумент
+в фигурных скобках.  Например, команда <CODE>@dfn</CODE> обозначает вводимый
+или определяемый термин; она используется следующим образом: <SAMP>`В
+Texinfo, @@-команды -- это команды @dfn{разметки}.'</SAMP>
+
+<DT>4. Алфавитные команды, занимающие целую строку.
+<DD>
+Эти команды занимают всю строку.  Строка начинается с @, за которым
+идет имя команды (слово); например, <CODE>@center</CODE> или <CODE>@cindex</CODE>.
+Если не требуется аргумент, после слова пишется символ конца строки.
+Если нужен аргумент, он отделяется от имени команды пробелом.  Фигурные
+скобки не используются.
+</DL>
+
+<P>
+<A NAME="idx1056"></A>
+Таким образом, алфавитные команды разделяются на классы с разными
+синтаксисами аргументов.  Нельзя сказать, к какому классу принадлежит
+команда по виду ее имени, но можно определить это по ее значению: если
+команда обозначает графический знак, то она относится к классу 2 и не
+требует аргументов; если важно использовать команду вместе с другим
+текстом в абзаце, то она относится к классу 3, и за ней должен следовать
+аргумент в фигурных скобках; иначе она относится к классу 4 и использует
+остаток строки в качестве аргумента.
+
+
+<P>
+Команды классов 3 и 4 имеют разный синтаксис, чтобы было легче читать
+Texinfo-файлы, а так же чтобы помочь правильной работе команд GNU Emacs
+для заполнения и работы с абзацами.  Есть только одно исключение из
+этого правила: команда <CODE>@refill</CODE>, которая всегда используется в
+конце абзаца, сразу после завершающей точки или другого знака
+препинания.  <CODE>@refill</CODE> не принимает аргументов и <EM>не</EM> требует
+фигурных скобок.  <CODE>@refill</CODE> никогда не смущает команды Emacs для
+абзацев, потому что никогда не появляется в начале строки.
+<P></P><HR>
+ [<A HREF="texinfo_toc.html">Contents</A>] &#160; [<A HREF="texinfo_29.html">Previous</A>] &#160; [<A HREF="texinfo_31.html">Next</A>] &#160;<BR><HR><BR>
+
+<!-- Rambler Stuff-->
+<table Border=0 Width="100%" CELLPADDING="0" CELLSPACING="0" BORDER="0"
+<tr>
+<td ALign=Left vAlign=TOP>
+<!--begin of Top100-->
+<a href="http://top100.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?330202" alt="Rambler's Top100" width=1 height=1 border=0></a>
+<!--end of Top100 code-->
+</td>
+<td ALign="Right" vALIGN=TOP>
+<!--begin of Top100 logo-->
+<a href="http://top100.rambler.ru/top100/">
+<img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-blue.gif" alt="Rambler's Top100" width=88 height=31 border=0></a>
+<!--end of Top100 logo -->
+</td>
+</tr>
+</table>
+<!--/Rambler Stuff -->
+</body></html>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38951496-1']);
+  _gaq.push(['_trackPageview']);
+  // st1 Sunday, 06-Dec-2015 19:08:25 MSK
+  // st2 109.252.59.207
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>

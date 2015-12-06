@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="content-type" content="text/html; charset=windows-1251">
+<!-- Created by texi2html 1.57 from /ibend/man/texinfo/html/texinfo.texi on September, 29  1999 -->
+
+<TITLE>Texinfo 4.0 - Перезаполнение абзацев</TITLE>
+</HEAD>
+<BODY bgcolor="white" text="black">
+ [<A HREF="texinfo_toc.html">Contents</A>] &#160; [<A HREF="texinfo_28.html">Previous</A>] &#160; [<A HREF="texinfo_30.html">Next</A>] &#160;<BR><HR><BR>
+
+<H1><A NAME="sec272">Перезаполнение абзацев</A></H1>
+<P>
+<A NAME="idx1049"></A>
+<A NAME="idx1050"></A>
+<A NAME="idx1051"></A>
+<A NAME="idx1052"></A>
+
+
+<P>
+Команда <CODE>@refill</CODE> заполняет абзац и, возможно, делает отступ в его
+первой строке.<A NAME="docf20" href="texinfo_foot.html#foot20">(20)</A>  Команда <CODE>@refill</CODE> уже не
+важна, но мы описываем ее, так как она была нужна раньше.  Вы увидите ее
+во многих старых Texinfo-файлах.
+
+<P>
+Без перезаполнения, абзацы, содержащие длинные @-конструкции могли
+выглядеть после форматирования плохо, потому что программа
+форматирования удаляет @-команды и укорачивает некоторые строки больше
+других.  Раньше ни команда <CODE>texinfo-format-region</CODE>, ни
+<CODE>texinfo-format-buffer</CODE> не перезаполняли абзацы автоматически.
+Нужно было писать команду <CODE>@refill</CODE> в конце каждого абзаца, чтобы
+эти форматирующие команды заполняли их.  (И TeX и <CODE>makeinfo</CODE>
+всегда перезаполняли абзацы автоматически.)  Теперь все программы,
+форматирующие для Info, автоматически заполняют и делают отступы в
+абзацах, которые этого требуют.
+
+<P>
+Команда <CODE>@refill</CODE> заставляет <CODE>texinfo-format-region</CODE> и
+<CODE>texinfo-format-buffer</CODE> перезаполнять абзац в Info-файле
+<EM>после</EM> того, как завершена вся другая обработка.  По этой причине
+вы не можете использовать <CODE>@refill</CODE> в абзаце, содержащем
+<CODE>@*</CODE> или <CODE>@w{ ... }</CODE>, так как перезаполнение перекроет
+эти команды.
+
+<P>
+Команды <CODE>texinfo-format-region</CODE> и <CODE>texinfo-format-buffer</CODE>
+теперь автоматически добавляют <CODE>@refill</CODE> в конец каждого абзаца,
+который должен быть заполнен.  Они не добавляют <CODE>@refill</CODE> в конец
+абзацев, которые содержат <CODE>@*</CODE> или <CODE>@w{ ...}</CODE>, и,
+следовательно, не перезаполняют их и не делают в них отступы.<P></P><HR>
+ [<A HREF="texinfo_toc.html">Contents</A>] &#160; [<A HREF="texinfo_28.html">Previous</A>] &#160; [<A HREF="texinfo_30.html">Next</A>] &#160;<BR><HR><BR>
+
+<!-- Rambler Stuff-->
+<table Border=0 Width="100%" CELLPADDING="0" CELLSPACING="0" BORDER="0"
+<tr>
+<td ALign=Left vAlign=TOP>
+<!--begin of Top100-->
+<a href="http://top100.rambler.ru/top100/"><img src="http://counter.rambler.ru/top100.cnt?330202" alt="Rambler's Top100" width=1 height=1 border=0></a>
+<!--end of Top100 code-->
+</td>
+<td ALign="Right" vALIGN=TOP>
+<!--begin of Top100 logo-->
+<a href="http://top100.rambler.ru/top100/">
+<img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-blue.gif" alt="Rambler's Top100" width=88 height=31 border=0></a>
+<!--end of Top100 logo -->
+</td>
+</tr>
+</table>
+<!--/Rambler Stuff -->
+</body></html>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38951496-1']);
+  _gaq.push(['_trackPageview']);
+  // st1 Sunday, 06-Dec-2015 19:08:25 MSK
+  // st2 109.252.59.207
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
